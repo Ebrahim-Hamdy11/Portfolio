@@ -220,7 +220,7 @@ header {
 
 /* Projects Section */
 .projects-section {
-    padding: 110px 8%;
+    padding: 60px 8%;
     position: relative;
 }
 
@@ -228,7 +228,7 @@ header {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 800;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .section-title span {
@@ -350,6 +350,7 @@ footer {
     padding: 50px 8% 30px;
     border-top: 1px solid var(--border-color);
     background-color: rgba(5, 5, 5, 0.95);
+    margin-top: 60px;
 }
 
 .social-footer {
@@ -418,7 +419,7 @@ footer span {
     .hero { padding: 120px 5% 50px; }
     .hero h1 { font-size: 2.3rem; }
     .hero p { font-size: 1rem; }
-    .projects-section { padding: 80px 5%; }
-    .section-title { font-size: 2rem; margin-bottom: 40px; }
+    .projects-section { padding: 50px 5%; }
+    .section-title { font-size: 2rem; margin-bottom: 30px; }
     .projects-grid { grid-template-columns: 1fr; }
 }

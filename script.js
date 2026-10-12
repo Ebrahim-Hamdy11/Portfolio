@@ -79,6 +79,22 @@ const mlProjects = [
     }
 ];
 
+// قسم مشاريع Deep Learning
+const dlProjects = [
+    {
+        title: "Binary Classification Using PyTorch",
+        desc: "Developing and training a deep neural network architecture using PyTorch for binary classification tasks, optimizing model performance with custom loss functions and evaluation metrics.",
+        tech: ["Python", "PyTorch", "Deep Learning", "Binary Classification"],
+        github: "https://github.com/Ebrahim-Hamdy11/Binary_classification-Deep-Learning-using-Pytorch"
+    },
+    {
+        title: "Multi-Class Classification Using PyTorch",
+        desc: "Building a multi-class neural network classifier using PyTorch, featuring custom data loaders, activation functions, and advanced optimization algorithms for accurate class predictions.",
+        tech: ["Python", "PyTorch", "Deep Learning", "Multi-Class"],
+        github: "https://github.com/Ebrahim-Hamdy11/multi_class_classification_DeepLearning_Using-Pytorch"
+    }
+];
+
 function renderProjects() {
     const container = document.getElementById('projects-container');
     if (!container) return;
@@ -105,4 +121,33 @@ function renderProjects() {
     container.innerHTML = html;
 }
 
-document.addEventListener('DOMContentLoaded', renderProjects);
+function renderDLProjects() {
+    const container = document.getElementById('deep-learning-container');
+    if (!container) return;
+
+    let html = '';
+    dlProjects.forEach((proj) => {
+        const techBadges = proj.tech.map(t => `<span class="tech-item">${t}</span>`).join('');
+        
+        html += `
+            <div class="project-card" onclick="window.open('${proj.github}', '_blank')">
+                <div class="project-header">
+                    <i class="fas fa-folder-open folder-icon"></i>
+                    <i class="fab fa-github github-icon"></i>
+                </div>
+                <h3 class="project-title">${proj.title}</h3>
+                <p class="project-desc">${proj.desc}</p>
+                <div class="project-tech">
+                    ${techBadges}
+                </div>
+            </div>
+        `;
+    });
+
+    container.innerHTML = html;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderProjects();
+    renderDLProjects();
+});
